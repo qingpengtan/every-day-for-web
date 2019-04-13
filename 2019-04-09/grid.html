@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid布局</title>
+</head>
+
+<body>
+    <div>
+        <ul class="container">
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+            <li class="item">test</li>
+        </ul>
+    </div>
+</body>
+<style>
+    .container {
+        padding: 0;
+        display: grid;
+        background: #dddddd;
+        /*设置列宽, 设定几个值就显示几个列*/
+        grid-template-columns: 1fr 1fr 3fr;
+        /*设置行高，计算包含边距*/
+        grid-template-rows: repeat(8, 50px);
+        /* 给网格区域命名 */
+        /* grid-template-areas:   "header header"
+                        "content sidebar"
+                        "footer footer"; */
+        /* 设置列间隔 */
+        grid-column-gap: 10px;
+        /* 设置行间隔 */
+        grid-row-gap: 10px;
+        /* 设置网格位置*/
+        /* justify-items: center; */
+        /* 设置 */
+        /* justify-content: space-around; */
+        justify-items:end;
+    }
+
+    .item {
+        /* width: 100%; */
+        /* justify-self:center; */
+        list-style: none;
+        background: red;
+    }
+
+    /* 属性justify-items 和 justify-self 以行轴为参照对齐项目，属性align-items 和 align-self 以列轴为参照对齐项目。
+
+属性justify-items 和 align-items 是网格容器的属性，并支持如下这些值：
+
+    auto
+    normal
+    start
+    end
+    center
+    stretch
+    baseline
+    first baseline
+    last baseline 
+    
+    
+    属性align-content用于定义网格轨道延着行的轴线的对齐方式，而属性justify-content用于定义网格轨道沿着列的轴线的对齐方式。并分别支持如下属性：
+    normal
+    start
+    end
+    center
+    stretch
+    space-around
+    space-between
+    space-evenly
+    baseline
+    first baseline
+    last baseline
+    
+
+
+    项目可以用属性align-self 和 justify-self定义自己的对齐方式，并支持如下这些属性值：
+
+    auto
+    normal
+    start
+    end
+    center
+    stretch
+    baseline
+    first baseline
+    last baseline
+    */
+</style>
+
+</html>

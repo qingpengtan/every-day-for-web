@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深拷贝</title>
+</head>
+<body>
+
+    
+</body>
+
+<script>
+// 第一种方法(只拷贝第一层级)
+let obj = {
+    name:"xiao",
+    age:'16'
+}
+
+function deepCopyOne(obj){
+    let newObj = {};
+    for(let item in obj){
+        newObj[item] = obj[item];
+    }
+    return newObj;
+}
+
+var copyobj = deepCopyOne(obj)
+console.log(copyobj) 
+
+</script>
+
+</html>

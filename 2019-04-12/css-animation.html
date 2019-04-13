@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3动画</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let animation = {
+        animationName: "", //指定 @keyframes 动画的名称！
+        animationDuration: "", //动画完成一个周期的时间，默认为 0s！
+        animationTimingFunction: "", //动画运行的'节奏'，默认是 ease！
+        animationIterationCount: "", //	动画播放的次数，默认是 1,不可以为负数,infinite 表示无限循环,可以为小数，比如 0.5 代表播放动画的一半即结束！
+        
+        animationDirection: "", //规定动画是否在下一个周期逆向播放！
+        // normal: 每次从 @keyframes 0% 执行到 100%，一个周期结束后立即回到 0% 的位置
+        // alternate: 假设 animation-iteration-count: infinite，从 @keyframes 0% 执行到 100%后，再从 100% 的位置 回到 0%，周而复始
+        // reverse: 每次从 @keyframes 100% 执行到 0%，，一个周期结束后立即回到 100% 的位置
+        // alternate-reverse: 假设 animation-iteration-count: infinite，从 @keyframes 100% 执行到 0%后，再从 0% 的位置 回到 100%，周而复始
+        animationDelay: "", //动画开始播放的延迟时间，默认是 0,可以未复数！
+      
+        animationFillMode: "", //	规定动画的填充模式
+        //none 是默认值，表示动画播放完成后，恢复到初始的状态。
+        // forwards 表示动画播放完成后，保持 @keyframes 里最后一帧的样式。
+        // backwards 表示开始播放动画之前，元素的样式将设置为动画第一帧的样式
+        // both 相当于同时配置了 forwards 和 backwards。也就是说，动画开始前，元素样式将设置为动画第一帧的样式；而在动画线束状态，元素样式将设置为动画最后一帧样式。
+        animationPlayState: "", //控制动画的运行或暂停，默认是 running
+    }
+</script>
+
+</html>
