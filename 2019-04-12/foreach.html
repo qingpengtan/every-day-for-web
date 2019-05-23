@@ -29,29 +29,42 @@
     // 第一种遍历
     // for(let item in weekDay){
     //     console.log(item);
-    // }
-    // 第二种遍历map（浅拷贝，改变原数组），filter（不改变原数组，返回新数组）
-    weekDay.filter(data => {
-        console.log(data);
-    })
-    var arr = [73, 84, 56, 22, 100]
-    var newArr = arr.filter(item => item > 80) //得到新数组 [84, 100]
-    console.log(newArr, arr)
-    // every遍历
+    //
+    //map 和foreach的区别在于map在return的时候会返回一个新数组，而foreach不会。map如果在对复杂数组操作时会改变数据内容并返回一个新数组
+    //
+    // weekDay.filter(data => {
+    //     console.log(data);
+    // })
+    // var arr = [73, 84, 56, 22, 100]
+    // var newArr = arr.filter(item => item > 80) //得到新数组 [84, 100]
+    // console.log(newArr, arr)
+    // // every遍历
     // every()是对数组中的每一项运行给定函数，如果该函数对每一项返回true,则返回true。
     //some遍历
     //some()是对数组中每一项运行指定函数，如果该函数对任一项返回true，则返回true。
     //reduce
     //reduce() 方法接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值。
-    arr.reduce(function (previousValue, currentValue, index, array) {
-        return previousValue + currentValue;
-    });
+    // arr.reduce(function (previousValue, currentValue, index, array) {
+    //     return previousValue + currentValue;
+    // });
     // reduceRight
     // reduceRight()方法的功能和reduce()功能是一样的，不同的是reduceRight()从数组的末尾向前将数组中的数组项做累加。
     // find
     // find()方法返回数组中符合测试函数条件的第一个元素。否则返回undefined 
     
     // Object.keys();
+    let newArrs = [1,2,3,4,5,6];
+    let newObj = [{name:'xxx'}]
+    let arrs = newArrs.forEach(data => {
+        data++;
+        return data;
+    })
+    // let objs = newObj.filter(data => {
+    //     data['name'] = 'ddd';
+    //     // return data;
+    // })
+    console.log(newArrs);
+    console.log(arrs);
 </script>
 
 </html>
